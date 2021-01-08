@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:background="@drawable/back_ground"
+    android:layout_height="match_parent"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:paddingBottom="50dp"
+
+        android:paddingTop="50dp"
+        android:background="@drawable/layout_shape"
+        android:layout_height="wrap_content">
+
+
+        <Button
+
+            android:id="@+id/emailUse"
+            android:layout_width="180dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_height="45dp"
+            android:layout_below="@+id/forgot_password"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:text="Log In"
+
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:background="@drawable/button_shap"
+            android:enabled="true"/>
+
+        <Button
+
+            android:id="@+id/GoogleAccount"
+            android:layout_width="180dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_height="45dp"
+            android:layout_below="@+id/emailUse"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:text="Log In"
+
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:background="@drawable/button_shap"
+            android:enabled="true"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

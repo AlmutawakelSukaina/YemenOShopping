@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/back_ground"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:paddingBottom="20dp"
+
+        android:paddingTop="50dp"
+        android:background="@drawable/layout_shape"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="100dp"
+
+            android:text="SIGN UP"
+            android:textStyle="italic"
+            android:textColor="#862d86"
+            android:textSize="30dp" />
+        <EditText
+
+            android:id="@+id/emailSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="#ffff"
+            android:textColorHint="#fff"
+            android:drawableLeft="@drawable/ic_outline_email_24"
+            android:padding="10dp"
+            android:background="@drawable/shape_edit_text"
+            android:drawablePadding="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="20dp">
+
+
+        </EditText>
+
+
+        <EditText
+
+            android:id="@+id/passwordSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailSignUp"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/ic_outline_lock_24"
+            android:background="@drawable/shape_edit_text"
+            android:layout_marginTop="11dp"
+            android:textColorHint="#ffff"
+            android:textColor="#fff"
+            android:layout_marginRight="20dp"
+            android:drawablePadding="10dp"
+            android:paddingBottom="20dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+
+
+        <Button
+
+            android:id="@+id/SIGNUP_button"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/passwordSignUp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:text="Sign Up"
+
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:background="@drawable/button_shap"
+            android:enabled="true"/>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

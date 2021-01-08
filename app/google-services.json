@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "392841220106",
+    "project_id": "oshopping-3cc42",
+    "storage_bucket": "oshopping-3cc42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392841220106:android:922a1fd1e3450d15cd4ff3",
+        "android_client_info": {
+          "package_name": "com.yemen.oshopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "392841220106-so8dnc9479v9gh7j7gve4dm9iqm893ko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8heoSFL3t1t9lryKz36J6YbiouVm9yCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "392841220106-so8dnc9479v9gh7j7gve4dm9iqm893ko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
