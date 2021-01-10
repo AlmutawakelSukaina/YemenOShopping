@@ -1,6 +1,7 @@
 package com.yemen.oshopping.api
 
-import com.OShopping.model.DefaultResponse
+
+import com.yemen.oshopping.model.DefaultResponse
 import retrofit2.Call
 import retrofit2.http.*
 import java.util.*
