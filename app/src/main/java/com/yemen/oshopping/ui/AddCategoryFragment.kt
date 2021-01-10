@@ -11,11 +11,13 @@ import androidx.lifecycle.ViewModelProviders
 import com.yemen.oshopping.R
 import com.yemen.oshopping.model.Category
 import com.yemen.oshopping.viewmodel.OshoppingViewModel
+import kotlinx.android.synthetic.main.fragment_add_category.*
 
 
 class AddCategoryFragment : Fragment() {
 
     lateinit var addCategoryBtn: Button
+    lateinit var updateCategoryBtn: Button
     lateinit var addCategoryEditText: EditText
     lateinit var oshoppingViewModel: OshoppingViewModel
 
@@ -32,11 +34,16 @@ class AddCategoryFragment : Fragment() {
     ): View? {
         val view=inflater.inflate(R.layout.fragment_add_category, container, false)
         addCategoryBtn=view.findViewById(R.id.add_cat_btn)
+        updateCategoryBtn=view.findViewById(R.id.update_cat_btn)
         addCategoryEditText=view.findViewById(R.id.add_cat_editText)
         addCategoryBtn.setOnClickListener {
             val cat= Category(cat_name=addCategoryEditText.text.toString())
             oshoppingViewModel.pushcat(cat)
 
+        }
+        updateCategoryBtn.setOnClickListener {
+            val cat= Category(5,"category1 updated")
+            oshoppingViewModel.updateCategory(cat)
         }
         return view
     }

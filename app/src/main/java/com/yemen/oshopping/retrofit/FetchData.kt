@@ -3,43 +3,28 @@ package com.yemen.oshopping.retrofit
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.google.gson.GsonBuilder
-import com.yemen.oshopping.api.OshoppingApi
 import com.yemen.oshopping.api.ProductResponse
 import com.yemen.oshopping.model.ProductItem
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+
 
 const val TAG = "fetchProduct"
 
 class FetchData {
 
-    private val oshoppingApi: OshoppingApi
 
-    init {
-        val gson = GsonBuilder()
-            .setLenient()
-            .create()
-        val retrofit: Retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.1.2/")
-            .addConverterFactory(GsonConverterFactory.create(gson))
-            .build()
-
-        oshoppingApi = retrofit.create(OshoppingApi::class.java)
-    }
 
     fun fetchProduct(): LiveData<List<ProductItem>> {
-        return fetchProductMetaData(oshoppingApi.fetchProduct())
+        return fetchProductMetaData(RetrofitClient().oshoppingApi.fetchProduct())
     }
 
     fun fetchProductByCategory(category_id: Int): LiveData<List<ProductItem>> {
-        return fetchProductMetaData(oshoppingApi.fetchProductByCategory(category_id))
+        return fetchProductMetaData(RetrofitClient().oshoppingApi.fetchProductByCategory(category_id))
     }
     fun searchProduct(query: String): LiveData<List<ProductItem>> {
-        return fetchProductMetaData(oshoppingApi.searchProduct(query))
+        return fetchProductMetaData(RetrofitClient().oshoppingApi.searchProduct(query))
     }
 
     fun fetchProductMetaData(productRequest: Call<ProductResponse>): LiveData<List<ProductItem>> {

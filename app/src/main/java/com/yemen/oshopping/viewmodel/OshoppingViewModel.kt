@@ -9,6 +9,7 @@ import com.yemen.oshopping.model.ProductDetails
 import com.yemen.oshopping.model.ProductItem
 import com.yemen.oshopping.retrofit.FetchData
 import com.yemen.oshopping.retrofit.PushData
+import com.yemen.oshopping.retrofit.UpdateData
 
 
 class OshoppingViewModel : ViewModel() {
@@ -41,6 +42,9 @@ class OshoppingViewModel : ViewModel() {
 
     fun pushcat(category: Category) = PushData().pushCategory(category)
     fun pushProduct(product: ProductDetails) = PushData().pushProduct(product)
+
+    //update data in database
+    fun updateCategory(category: Category) = UpdateData().updateCategory(category)
 
 
 }
