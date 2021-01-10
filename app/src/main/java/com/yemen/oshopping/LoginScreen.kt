@@ -37,7 +37,7 @@ class LoginScreen : AppCompatActivity() , View.OnClickListener{
 
         if (i == R.id.signUp) {
 
-            val intent = Intent(this, SignUpOptions::class.java)
+            val intent = Intent(this, SignUp::class.java)
 
             startActivity(intent)
 
