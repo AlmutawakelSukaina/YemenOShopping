@@ -33,6 +33,8 @@ interface OshoppingApi {
 
     @GET("oshopping_api/api/product_api.php")
     fun fetchProductByCategory(@Query("cat_id")category_id:Int):Call<ProductResponse>
+    @GET("oshopping_api/api/product_api.php")
+    fun searchProduct(@Query("query") query:String):Call<ProductResponse>
 
 
 }

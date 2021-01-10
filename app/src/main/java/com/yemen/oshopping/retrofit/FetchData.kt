@@ -32,14 +32,17 @@ class FetchData {
     }
 
     fun fetchProduct(): LiveData<List<ProductItem>> {
-        return fetchProduct1(oshoppingApi.fetchProduct())
+        return fetchProductMetaData(oshoppingApi.fetchProduct())
     }
 
     fun fetchProductByCategory(category_id: Int): LiveData<List<ProductItem>> {
-        return fetchProduct1(oshoppingApi.fetchProductByCategory(category_id))
+        return fetchProductMetaData(oshoppingApi.fetchProductByCategory(category_id))
+    }
+    fun searchProduct(query: String): LiveData<List<ProductItem>> {
+        return fetchProductMetaData(oshoppingApi.searchProduct(query))
     }
 
-    fun fetchProduct1(productRequest: Call<ProductResponse>): LiveData<List<ProductItem>> {
+    fun fetchProductMetaData(productRequest: Call<ProductResponse>): LiveData<List<ProductItem>> {
         val responseLiveData: MutableLiveData<List<ProductItem>> = MutableLiveData()
 
         productRequest.enqueue(object : Callback<ProductResponse> {

@@ -15,6 +15,7 @@ class OshoppingViewModel : ViewModel() {
 
     val productItemLiveData: LiveData<List<ProductItem>>
     var productLiveData = MutableLiveData<Int>()
+    val mutableSearchTerm = MutableLiveData<String>()
 
     init {
         productItemLiveData = FetchData().fetchProduct()
@@ -27,6 +28,15 @@ class OshoppingViewModel : ViewModel() {
 
     fun loadProductByCategory(category_id: Int) {
         productLiveData.value = category_id
+    }
+
+    var searchLiveData: LiveData<List<ProductItem>> =
+        Transformations.switchMap(mutableSearchTerm) { query ->
+            FetchData().searchProduct(query)
+        }
+
+    fun search(query: String) {
+        mutableSearchTerm.value = query
     }
 
     fun pushcat(category: Category) = PushData().pushCategory(category)
