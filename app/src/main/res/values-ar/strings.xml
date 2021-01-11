@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تسوق إلكتروني</string>
+    <string name="skip">تخطي</string>
+    <string name="createNewAccount">إنشاء حساب جديد</string>
+    <string name="or">أو</string>
+    <string name="SignUP">إتسجيل</string>
+    <string name="google">التسجيل عن طريق حساب قوقل</string>
+    <string name="action_settings">الإعدادات</string>
+    <string name="LogIn">تسجيل الدخول</string>
+    <string name="password">كلمة السر</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="forgetPass">هل نسيت كلمة السر؟</string>
+    <string name="back">رجوع</string>
+    <string name="RestPass">إستعادة كلمة السر</string>
+    <string name="Reset">إستعادة</string>
+    <string name="AddNewProduct">إضافة منتج جديد</string>
+    <string name="NameProduct">اسم المنتج</string>
+    <string name="PriceProduct">سعر المنتج</string>
+    <string name="Quantity">الكمية</string>
+    <string name="selectImage">اإضافة صورة</string>
+    <string name="Add">إضافة</string>
+</resources>
