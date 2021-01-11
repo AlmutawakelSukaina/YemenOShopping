@@ -11,7 +11,13 @@
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="forgetPass">Forget Password?</string>
-   <string name="back">Back</string>
+    <string name="back">Back</string>
     <string name="RestPass">Reset Password</string>
     <string name="Reset">Reset</string>
+    <string name="AddNewProduct">Add New Product</string>
+    <string name="NameProduct">Product Name</string>
+    <string name="PriceProduct">Product Price</string>
+    <string name="Quantity">Quantity</string>
+    <string name="selectImage">Select Image</string>
+    <string name="Add">Add</string>
 </resources>
