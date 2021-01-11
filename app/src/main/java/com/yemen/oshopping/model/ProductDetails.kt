@@ -11,7 +11,7 @@ data class ProductDetails(
     var cat_id:Int,
     var product_details: String,
     var product_img: String,
-    var product_date: Date?=null,
+    var product_date: String?=null,
     var product_quantity: Int,
     var product_discount: Int
 )

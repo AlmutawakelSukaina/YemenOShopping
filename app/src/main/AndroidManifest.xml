@@ -8,18 +8,23 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainScreen"></activity>
-        <activity android:name=".SignUpOptions" />
-        <activity android:name=".LoginScreen" />
-        <activity android:name=".ResetPassword" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".SplashScreen">
+
+        android:theme="@style/AppTheme"
+        tools:targetApi="n">
+        <activity android:name=".MainScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".SignUpOptions" />
+        <activity android:name=".LoginScreen" />
+        <activity android:name=".ResetPassword" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".SplashScreen">
+
         </activity>
     </application>
 
