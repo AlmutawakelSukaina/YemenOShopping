@@ -16,7 +16,8 @@
     <string name="Reset">Reset</string>
     <string name="AddNewProduct">Add New Product</string>
     <string name="NameProduct">Product Name</string>
-    <string name="PriceProduct">Product Price</string>
+    <string name="PriceProductDolar">Product Price In Dollar</string>
+    <string name="PriceProductRial">Product Price In Rial</string>
     <string name="Quantity">Quantity</string>
     <string name="selectImage">Select Image</string>
     <string name="Add">Add</string>

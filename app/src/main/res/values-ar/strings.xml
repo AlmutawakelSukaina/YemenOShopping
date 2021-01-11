@@ -16,8 +16,10 @@
     <string name="Reset">إستعادة</string>
     <string name="AddNewProduct">إضافة منتج جديد</string>
     <string name="NameProduct">اسم المنتج</string>
-    <string name="PriceProduct">سعر المنتج</string>
+
     <string name="Quantity">الكمية</string>
     <string name="selectImage">اإضافة صورة</string>
     <string name="Add">إضافة</string>
+    <string name="PriceProductDolar">سعر المنتج بالدولار</string>
+    <string name="PriceProductRial">سعر المنتج بالريال</string>
 </resources>
