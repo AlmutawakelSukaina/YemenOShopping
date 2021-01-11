@@ -1,6 +1,7 @@
 package com.yemen.oshopping.api
 
 
+import com.yemen.oshopping.model.Category
 import com.yemen.oshopping.model.DefaultResponse
 import retrofit2.Call
 import retrofit2.http.*
@@ -38,6 +39,9 @@ interface OshoppingApi {
 
     @GET("oshopping_api/api/product_api.php")
     fun searchProduct(@Query("query") query: String): Call<ProductResponse>
+
+    @GET("oshopping_api/api/category_api.php")
+    fun fetchCategory(): Call<CategoryResponse>
 
     //put
     @FormUrlEncoded

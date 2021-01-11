@@ -15,11 +15,13 @@ import com.yemen.oshopping.retrofit.UpdateData
 class OshoppingViewModel : ViewModel() {
 
     val productItemLiveData: LiveData<List<ProductItem>>
+    val categoryItemLiveData: LiveData<List<Category>>
     var productLiveData = MutableLiveData<Int>()
     val mutableSearchTerm = MutableLiveData<String>()
 
     init {
         productItemLiveData = FetchData().fetchProduct()
+        categoryItemLiveData=FetchData().fetchCategory()
     }
 
     var productItemLiveDataByCategory: LiveData<List<ProductItem>> =
