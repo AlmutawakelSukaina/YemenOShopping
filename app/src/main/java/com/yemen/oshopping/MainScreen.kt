@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.yemen.oshopping.ui.AddCategoryFragment
+import com.yemen.oshopping.ui.ShowProductFragment
+import kotlinx.android.synthetic.main.activity_main_screen.*
 
 
 class MainScreen : AppCompatActivity(),ShowProductFragment.Callbacks {

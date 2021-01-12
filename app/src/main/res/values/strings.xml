@@ -41,6 +41,8 @@
     <string name="go_back">Back</string>
     <string name="add_category">Add Category</string>
     <string name="update_category">Update Category</string>
-
+    <string name="productDetails">Product Details</string>
+    <string name="add">Add</string>
+    <string name="close">Close</string>
 
 </resources>
