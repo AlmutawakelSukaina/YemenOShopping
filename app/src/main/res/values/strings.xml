@@ -21,4 +21,22 @@
     <string name="Quantity">Quantity</string>
     <string name="selectImage">Select Image</string>
     <string name="Add">Add</string>
+    <string name="Home">home</string>
+    <string name="Category">category</string>
+    <string name="Cart">cart</string>
+    <string name="Purchases">purchases</string>
+    <string name="Profile">profile</string>
+    <string name="my_account">My Account</string>
+    <string name="MyAccount">My Account</string>
+    <string name="log_out">log Out</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="Delivery_Addresses">Delivery_Addresses</string>
+    <string name="my_Balance">My Balance</string>
+    <string name="my_products">My Products</string>
+    <string name="go_back">Back</string>
+    <string name="add_category">Add Category</string>
+    <string name="update_category">Update Category</string>
+
+
 </resources>

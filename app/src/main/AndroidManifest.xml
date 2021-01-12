@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.yemen.oshopping">
 
     <application
@@ -11,7 +12,7 @@
 
         android:theme="@style/AppTheme"
         tools:targetApi="n">
-        <activity android:name=".MainScreen">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +24,7 @@
         <activity android:name=".LoginScreen" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".SignUp" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".MainScreen">
 
         </activity>
     </application>
