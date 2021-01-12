@@ -7,38 +7,57 @@
     android:padding="50dp"
     tools:context=".ui.AddCategoryFragment">
 
+    <LinearLayout
+        android:layout_width="315dp"
+        android:layout_height="415dp"
+        android:background="@drawable/layout_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188" />
 
     <EditText
         android:id="@+id/add_cat_editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:hint="add category"
+        android:layout_width="242dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="124dp"
+        android:hint="@string/add_category"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/add_cat_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="242dp"
+        android:layout_height="54dp"
         android:layout_marginTop="28dp"
-        android:text="add"
+        android:background="@drawable/button_shap"
+        android:text="@string/add_category"
+        android:textColor="#fff"
+        android:textSize="23sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_cat_editText" />
 
+
     <Button
         android:id="@+id/update_cat_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="update category"
+        android:layout_width="242dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button_shap"
+        android:text="@string/update_category"
+        android:textColor="#fff"
+        android:textSize="23sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_cat_btn" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
