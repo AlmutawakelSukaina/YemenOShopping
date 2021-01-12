@@ -4,34 +4,32 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.yemen.oshopping.ui.AddCategoryFragment
+import com.yemen.oshopping.ui.ShowProductFragment
+import kotlinx.android.synthetic.main.activity_main_screen.*
 
 
-class MainScreen : AppCompatActivity(),ShowProductFragment.Callbacks {
+class MainScreen : AppCompatActivity(), ShowProductFragment.Callbacks {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
 
 
         supportActionBar?.hide()
-        val fragment= ShowProductFragment.newInstance("")
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.container, fragment).addToBackStack(null)
-            .commit()
+
 
         title=resources.getString(R.string.add_category)
-        loadFragment(AddCategoryFragment())
+        loadFragment(Category_Fragment())
         navigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.navigation_Home-> {
                     title=resources.getString(R.string.Home)
-                    loadFragment(Home_Fragment.newInstance())
+                    loadFragment( ShowProductFragment.newInstance(""))
                     return@setOnNavigationItemSelectedListener true
                 }
 
                 R.id.navigation_Category-> {
                     title=resources.getString(R.string.Category)
-                    loadFragment(Category_Fragment.newInstance())
+                    loadFragment(Category_Fragment())
                     return@setOnNavigationItemSelectedListener true
                 }
 
