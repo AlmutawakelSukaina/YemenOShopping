@@ -4,12 +4,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.yemen.oshopping.ui.AddCategoryFragment
-import kotlinx.android.synthetic.main.activity_main_screen.*
 
-class MainScreen : AppCompatActivity() {
+
+class MainScreen : AppCompatActivity(),ShowProductFragment.Callbacks {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
+
+
+        supportActionBar?.hide()
+        val fragment= ShowProductFragment.newInstance("")
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.container, fragment).addToBackStack(null)
+            .commit()
 
         title=resources.getString(R.string.add_category)
         loadFragment(AddCategoryFragment())
@@ -56,5 +64,10 @@ class MainScreen : AppCompatActivity() {
         transaction.replace(R.id.container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+
+    }
+
+    override fun onProductSelected(product_id: Int) {
+
     }
 }
