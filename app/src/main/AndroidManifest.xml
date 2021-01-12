@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yemen.oshopping">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission
+    <uses-permission android:name="android.permission.INTERNET" /><uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
 
@@ -27,8 +26,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
-        <activity android:name=".SplashScreen"></activity>
-        <activity android:name=".addProduct">
+        <activity android:name=".addProduct"></activity>
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
