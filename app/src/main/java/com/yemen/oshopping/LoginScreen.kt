@@ -69,8 +69,8 @@ class LoginScreen : AppCompatActivity() , View.OnClickListener{
 
 
                     val user = mAuth!!.currentUser
-                    val intent = Intent(this, MainScreen::class.java)
-
+//                    val intent = Intent(this, MainScreen::class.java)
+                    val intent = Intent(this, ChangePassword::class.java)
                     startActivity(intent)
 
 
