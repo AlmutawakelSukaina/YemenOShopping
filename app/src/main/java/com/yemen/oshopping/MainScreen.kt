@@ -12,18 +12,21 @@ class MainScreen : AppCompatActivity(), ShowProductFragment.Callbacks {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
-
-
         supportActionBar?.hide()
-
-
+        //remove the double slash below to show the product details
+        val fragment = AddCategoryFragment.newInstance()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.container, fragment)
+            .addToBackStack(null)
+            .commit()
         title=resources.getString(R.string.add_category)
-        loadFragment(Category_Fragment())
+        //loadFragment(Category_Fragment())
         navigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.navigation_Home-> {
                     title=resources.getString(R.string.Home)
-                    loadFragment( ShowProductFragment.newInstance(""))
+                    loadFragment( ShowProductFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
 
@@ -66,6 +69,12 @@ class MainScreen : AppCompatActivity(), ShowProductFragment.Callbacks {
     }
 
     override fun onProductSelected(product_id: Int) {
-
+        //remove the double slash below to show the product details
+        //val fragment = ProductDetailsFragment.newInstance(product_id)
+        supportFragmentManager
+            .beginTransaction()
+          //  .replace(R.id.container, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }
