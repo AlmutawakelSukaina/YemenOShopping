@@ -8,14 +8,14 @@ import com.yemen.oshopping.ui.ShowProductFragment
 import kotlinx.android.synthetic.main.activity_main_screen.*
 
 
-class MainScreen : AppCompatActivity(),ShowProductFragment.Callbacks {
+class MainScreen : AppCompatActivity(),Home_Fragment.Callbacks {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
 
 
         supportActionBar?.hide()
-        val fragment= ShowProductFragment.newInstance("")
+        val fragment= Home_Fragment.newInstance("")
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.container, fragment).addToBackStack(null)
