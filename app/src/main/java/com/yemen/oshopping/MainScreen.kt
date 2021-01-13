@@ -14,8 +14,9 @@ class MainScreen : AppCompatActivity(),ShowProductFragment.Callbacks {
         setContentView(R.layout.activity_main_screen)
 
 
+
         supportActionBar?.hide()
-        val fragment= ShowProductFragment.newInstance("")
+        val fragment= Home_Fragment.newInstance()
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.container, fragment).addToBackStack(null)

@@ -44,5 +44,6 @@
     <string name="productDetails">Product Details</string>
     <string name="add">Add</string>
     <string name="close">Close</string>
+    <string name="fab">fab</string>
 
 </resources>

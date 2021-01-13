@@ -5,6 +5,6 @@ import com.yemen.oshopping.model.Category
 import com.yemen.oshopping.model.ProductItem
 
 data class CategoryResponse (
-    @SerializedName("listOfCategories")
+    @SerializedName("ListOfCategories")
     var categoryItem: List<Category>
 )

@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.yemen.oshopping.model.Category
 import com.yemen.oshopping.model.ProductDetails
 import com.yemen.oshopping.model.ProductItem
+import com.yemen.oshopping.retrofit.DeleteData
 import com.yemen.oshopping.retrofit.FetchData
 import com.yemen.oshopping.retrofit.PushData
 import com.yemen.oshopping.retrofit.UpdateData
@@ -48,5 +49,6 @@ class OshoppingViewModel : ViewModel() {
     //update data in database
     fun updateCategory(category: Category) = UpdateData().updateCategory(category)
 
+    fun deleteCategory(category: Category) = DeleteData().deleteCategory(category)
 
 }

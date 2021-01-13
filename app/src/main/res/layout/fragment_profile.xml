@@ -49,7 +49,7 @@
         android:layout_marginTop="88dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
-        android:background="@drawable/button_shap"
+        android:background="@drawable/profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
