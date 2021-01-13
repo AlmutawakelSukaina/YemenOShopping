@@ -29,8 +29,12 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".SplashScreen" />
-        <activity android:name=".LoginScreen">
+
+        </activity>
+
+        <activity android:name=".SignUpOptions" />
+
+        <activity android:name=".LoginScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,8 +42,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SignUpOptions" />
         <activity android:name=".addProduct" />
+
         <activity android:name=".ResetPassword" />
         <activity android:name=".SignUp" />
         <activity android:name=".MainScreen" />

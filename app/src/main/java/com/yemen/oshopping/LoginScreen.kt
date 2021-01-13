@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login_screen.*
@@ -13,16 +14,24 @@ import kotlinx.android.synthetic.main.activity_login_screen.*
 class LoginScreen : AppCompatActivity() , View.OnClickListener{
     private val TAG = "FirebaseEmailPassword"
 
+    private lateinit var skip: TextView
     private var mAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_screen)
+
+        skip = findViewById(R.id.skip_text_view)
         supportActionBar?.hide()
         login_button.setOnClickListener(this)
         signUp.setOnClickListener(this)
         forgot_password.setOnClickListener(this)
         mAuth = FirebaseAuth.getInstance()
+
+        skip.setOnClickListener {
+            var intent = Intent(this, MainScreen::class.java)
+            startActivity(intent)
+        }
 
     }
     override fun onStart() {
