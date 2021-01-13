@@ -41,5 +41,12 @@
     <string name="productDetails">تفاصيل المنتج</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="close">إغلاق</string>
+    <string name="newPassword">كلمة السر الجديدة</string>
+    <string name="confirm">تأكيد كلمة السر</string>
+    <string name="changePassword">تغيير كلمة السر</string>
+
+
+
+
 </resources>
 
