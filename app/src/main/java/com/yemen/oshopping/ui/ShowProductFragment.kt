@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -70,8 +71,7 @@ class ShowProductFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
                 oshoppingViewModel.productItemLiveData.observe(
-                    viewLifecycleOwner, androidx.lifecycle.Observer
-                    { productItems ->
+                    viewLifecycleOwner, Observer{ productItems ->
                         Log.d("productItemLiveData", "product Item Live Data")
                         updateui(productItems)
                     })
@@ -153,6 +153,9 @@ class ShowProductFragment : Fragment() {
 
 
     companion object {
+        fun newInstance():ShowProductFragment{
+            return ShowProductFragment()
+        }
         fun newInstance(productCategory: String) = ShowProductFragment().apply {
             arguments = Bundle().apply {
                 putString(ARG_PARAM1, productCategory)
