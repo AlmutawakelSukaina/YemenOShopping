@@ -35,8 +35,11 @@ class FetchData {
                 response: Response<SingleProductResponse>
             ) {
                 Log.d(TAG, "Response received successfully")
-
                 val singleProductResponse: SingleProductResponse? = response.body()
+
+                val productItem: ProductItem? = singleProductResponse?.productItem
+                responseLiveData.value = productItem
+
                 val categoryItems: ProductItem? = singleProductResponse?.productItem
 
                 val productResponse: ProductResponse? = response.body()
@@ -69,6 +72,7 @@ class FetchData {
                     ?: mutableListOf()
 
                 responseLiveData.value = categoryItems
+
             }
     })
         return responseLiveData
