@@ -49,4 +49,9 @@ interface OshoppingApi {
     fun updateCategory(@Field("cat_id") cat_id: Int?,@Field("cat_name") cat_name: String
     ): Call<DefaultResponse>
 
+
+    @DELETE("oshopping_api/api/category_api.php")
+    fun deleteCategory(@Field("cat_id") cat_id: Int?,@Field("cat_name") cat_name: String
+    ): Call<DefaultResponse>
+
 }
