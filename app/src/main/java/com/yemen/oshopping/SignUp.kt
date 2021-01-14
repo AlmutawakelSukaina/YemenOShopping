@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -22,6 +23,7 @@ import kotlinx.android.synthetic.main.activity_sign_up_options.*
 
 class SignUp : AppCompatActivity(), View.OnClickListener{
 
+    private lateinit var skip: TextView
     private val TAG = "FirebaseEmailPassword"
     val RC_SIGN_IN: Int = 1
     lateinit var signInClient: GoogleSignInClient
@@ -31,6 +33,8 @@ class SignUp : AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+
+        skip = findViewById(R.id.skip_text_view)
         supportActionBar?.hide()
         initializeUI()
         setupGoogleLogin()
@@ -38,6 +42,11 @@ class SignUp : AppCompatActivity(), View.OnClickListener{
         GoogleAccount.setOnClickListener (this )
         logIn.setOnClickListener(this)
         mAuth = FirebaseAuth.getInstance()
+
+        skip.setOnClickListener {
+            var intent = Intent(this, MainScreen::class.java)
+            startActivity(intent)
+        }
 
     }
 

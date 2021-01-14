@@ -17,7 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="n">
+
         <activity android:name=".MainScreen"></activity>
+
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -29,14 +31,20 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
+
         <activity android:name=".addProduct" />
         <activity android:name=".MainActivity">
+
+        </activity>
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".captureImage"
             android:icon="@drawable/back"
@@ -46,6 +54,8 @@
         <activity android:name=".ResetPassword" />
         <activity android:name=".SignUp" />
         <activity android:name=".SplashScreen" />
+
+
     </application>
 
 </manifest>
