@@ -1,5 +1,6 @@
 package com.yemen.oshopping.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -7,7 +8,11 @@ import androidx.lifecycle.ViewModel
 import com.yemen.oshopping.model.Category
 import com.yemen.oshopping.model.ProductDetails
 import com.yemen.oshopping.model.ProductItem
+
+import com.yemen.oshopping.model.User
+
 import com.yemen.oshopping.retrofit.DeleteData
+
 import com.yemen.oshopping.retrofit.FetchData
 import com.yemen.oshopping.retrofit.PushData
 import com.yemen.oshopping.retrofit.UpdateData
@@ -22,7 +27,7 @@ class OshoppingViewModel : ViewModel() {
 
     init {
         productItemLiveData = FetchData().fetchProduct()
-        categoryItemLiveData=FetchData().fetchCategory()
+        categoryItemLiveData = FetchData().fetchCategory()
     }
 
     var productItemLiveDataByCategory: LiveData<List<ProductItem>> =
@@ -32,6 +37,15 @@ class OshoppingViewModel : ViewModel() {
 
     fun loadProductByCategory(category_id: Int) {
         productLiveData.value = category_id
+    }
+
+    var productItemLiveDataByID: LiveData<ProductItem> =
+        Transformations.switchMap(productLiveData) { product_id ->
+            FetchData().fetchProductById(product_id)
+        }
+
+    fun getProductById(product_id: Int) {
+        productLiveData.value = product_id
     }
 
     var searchLiveData: LiveData<List<ProductItem>> =
@@ -45,10 +59,16 @@ class OshoppingViewModel : ViewModel() {
 
     fun pushcat(category: Category) = PushData().pushCategory(category)
     fun pushProduct(product: ProductDetails) = PushData().pushProduct(product)
+    fun pushUser(user: User) = PushData().pushUser(user)
+
 
     //update data in database
     fun updateCategory(category: Category) = UpdateData().updateCategory(category)
 
+    fun updatUser(user: User) = UpdateData().updateUser(user)
+
+
     fun deleteCategory(category: Category) = DeleteData().deleteCategory(category)
+
 
 }
