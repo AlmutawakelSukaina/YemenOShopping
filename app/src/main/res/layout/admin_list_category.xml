@@ -4,17 +4,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#D5F4F2F2"
-    tools:context=".Category_Fragment">
+    tools:context=".AdminScreen">
 
     <!-- TODO: Update blank fragment layout -->
 
 
-    <TextView
+    <EditText
         android:id="@+id/category"
-        android:layout_width="259dp"
-        android:layout_height="64dp"
+        android:layout_width="329dp"
+        android:layout_height="82dp"
         android:background="@drawable/shape_navagitionbar"
         android:gravity="center"
         android:padding="16dp"
@@ -24,21 +24,34 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.078" />
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="66dp"
         android:layout_height="63dp"
         android:src="@drawable/sofa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.097" />
+
+    <ImageView
+        android:id="@+id/delete_button"
+        android:layout_width="66dp"
+        android:layout_height="63dp"
+        android:src="@drawable/ic_baseline_delete_outline_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

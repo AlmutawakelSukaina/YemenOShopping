@@ -1,5 +1,6 @@
 package com.yemen.oshopping
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +13,7 @@ import androidx.fragment.app.Fragment
 
 
 
-class Profile_Fragment:Fragment() {
+class Profile_Fragment:Fragment(),View.OnClickListener {
 
     lateinit var goBack: ImageView
     lateinit var myAccount: TextView
@@ -40,6 +41,7 @@ class Profile_Fragment:Fragment() {
         deliveryAddresses=view.findViewById(R.id.delivery_Addresses)
         contactUs=view.findViewById(R.id.contact_us)
         logOut=view.findViewById(R.id.log_out)
+        myProduct.setOnClickListener(this)
 
         return view
     }
@@ -48,6 +50,12 @@ class Profile_Fragment:Fragment() {
         fun newInstance(): Profile_Fragment {
             return Profile_Fragment()
         }
+    }
+
+    override fun onClick(v: View?) {
+        val intent = Intent(activity, addProduct::class.java)
+
+        startActivity(intent)
     }
 }
 

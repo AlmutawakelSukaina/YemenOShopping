@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OShopping</string>
+    <string name="app_name">FurnitureStore</string>
 
     <string name="skip">Skip</string>
     <string name="createNewAccount">Create New Account</string>
@@ -16,7 +16,8 @@
     <string name="Reset">Reset</string>
     <string name="AddNewProduct">Add New Product</string>
     <string name="NameProduct">Product Name</string>
-    <string name="PriceProduct">Product Price</string>
+    <string name="PriceProductDolar">Product Price In Dollar</string>
+    <string name="PriceProductRial">Product Price In Rial</string>
     <string name="Quantity">Quantity</string>
     <string name="selectImage">Select Image</string>
     <string name="Add">Add</string>
@@ -40,6 +41,14 @@
     <string name="go_back">Back</string>
     <string name="add_category">Add Category</string>
     <string name="update_category">Update Category</string>
+    <string name="productDetails">Product Details</string>
+    <string name="add">Add</string>
+
+    <string name="fab">fab</string>
+
+    <string name="newPassword">New Password</string>
+    <string name="confirm">Confirm Password</string>
+    <string name="changePassword">Change Password</string>
 
 
 </resources>

@@ -7,6 +7,11 @@ import com.yemen.oshopping.ui.AddCategoryFragment
 import com.yemen.oshopping.ui.ShowProductFragment
 import kotlinx.android.synthetic.main.activity_main_screen.*
 
+import com.yemen.oshopping.ui.AddUserFragment
+import com.yemen.oshopping.ui.ProductDetailsFragment
+import com.yemen.oshopping.ui.ShowProductFragment
+import kotlinx.android.synthetic.main.activity_main_screen.*
+
 
 class MainScreen : AppCompatActivity(), ShowProductFragment.Callbacks {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +20,22 @@ class MainScreen : AppCompatActivity(), ShowProductFragment.Callbacks {
         supportActionBar?.hide()
         //remove the double slash below to show the product details
         val fragment = AddCategoryFragment.newInstance()
+
+
+
+class MainScreen : AppCompatActivity(),Home_Fragment.Callbacks {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main_screen)
+
+
+
+        supportActionBar?.hide()
+
+        val fragment= ProductDetailsFragment.newInstance()
+
+        val fragment= Home_Fragment.newInstance()
+
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.container, fragment)

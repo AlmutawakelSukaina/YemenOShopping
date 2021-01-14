@@ -5,6 +5,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,19 +19,49 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="n">
-        <activity android:name=".uploadImage.UploadImageActivity"></activity>
-        <activity android:name=".SplashScreen" />
-        <activity android:name=".SignUpOptions" />
-        <activity android:name=".LoginScreen" />
-        <activity android:name=".ResetPassword" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".MainScreen">
+
+
+        <activity android:name=".MainScreen"></activity>
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <activity android:name=".addProduct" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".captureImage"
+            android:icon="@drawable/back"
+            android:label="@string/AddNewProduct" />
+
+        <activity android:name=".SignUpOptions" />
+        <activity android:name=".LoginScreen" />
+        <activity android:name=".ResetPassword" />
+        <activity android:name=".SignUp" />
+
+        <activity android:name=".SplashScreen" />
+
+
+
     </application>
 
 </manifest>

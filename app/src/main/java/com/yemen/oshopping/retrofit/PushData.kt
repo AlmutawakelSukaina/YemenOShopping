@@ -4,6 +4,7 @@ import android.util.Log
 import com.yemen.oshopping.model.Category
 import com.yemen.oshopping.model.DefaultResponse
 import com.yemen.oshopping.model.ProductDetails
+import com.yemen.oshopping.model.User
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -66,4 +67,38 @@ class PushData {
 
 
         }
+    fun pushUser(user: User) {
+        Log.d("pushUser", "pushUser:${user.toString()} ")
+        val pushUserRequest: Call<DefaultResponse> = RetrofitClient().oshoppingApi.pushUser(
+            user.user_id,
+            user.first_name,
+            user.last_name,
+            user.email,
+            user.latitude,
+            user.longitude,
+            user.details,
+            user.is_vendor,
+            user.block,
+            user.create_at
+            )
+
+        pushUserRequest.enqueue(object : Callback<DefaultResponse> {
+
+            override fun onFailure(call: Call<DefaultResponse>, t: Throwable) {
+                Log.d("pushUser", "Failed to push User", t)
+
+            }
+
+            override fun onResponse(
+                call: Call<DefaultResponse>,
+                response: Response<DefaultResponse>
+            ) {
+                Log.d("pushUser", "User pushed successfully")
+
+            }
+        })
+
+
+    }
+
     }

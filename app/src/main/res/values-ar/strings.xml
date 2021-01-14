@@ -16,7 +16,8 @@
     <string name="Reset">إستعادة</string>
     <string name="AddNewProduct">إضافة منتج جديد</string>
     <string name="NameProduct">اسم المنتج</string>
-    <string name="PriceProduct">سعر المنتج</string>
+    <string name="PriceProductDolar">السعر بالدولار</string>
+    <string name="PriceProductRial">السعر بالريال</string>
     <string name="Quantity">الكمية</string>
     <string name="selectImage">اإضافة صورة</string>
     <string name="Add">إضافة</string>
@@ -36,4 +37,16 @@
     <string name="go_back">رجوع</string>
     <string name="add_category">إضافة صنف</string>
     <string name="update_category">تعديل صنف</string>
+    <string name="add">إضافة</string>
+    <string name="productDetails">تفاصيل المنتج</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="close">إغلاق</string>
+    <string name="newPassword">كلمة السر الجديدة</string>
+    <string name="confirm">تأكيد كلمة السر</string>
+    <string name="changePassword">تغيير كلمة السر</string>
+
+
+
+
 </resources>
+
