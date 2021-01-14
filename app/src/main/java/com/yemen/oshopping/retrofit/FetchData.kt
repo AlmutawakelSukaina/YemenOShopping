@@ -42,7 +42,6 @@ class FetchData {
                 val productResponse: ProductResponse? = response.body()
                 val productItems: List<ProductItem> = productResponse?.productItem
                     ?: mutableListOf()
-                Log.d(TAG, "successfully ${productItems}")
                 responseLiveData.value = productItems
             }
         })
