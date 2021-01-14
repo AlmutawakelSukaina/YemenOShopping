@@ -13,7 +13,10 @@ class RetrofitClient {
             .setLenient()
             .create()
         val retrofit: Retrofit = Retrofit.Builder()
+
             .baseUrl("http://10.5.203.2/")
+
+
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
 

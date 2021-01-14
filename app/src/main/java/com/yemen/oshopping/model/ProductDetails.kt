@@ -2,7 +2,7 @@ package com.yemen.oshopping.model
 
 import java.util.*
 
-data class ProductDetails(
+data class  ProductDetails(
     var product_id: Int?=null,
     var product_name: String,
     var yrial_price: Double,

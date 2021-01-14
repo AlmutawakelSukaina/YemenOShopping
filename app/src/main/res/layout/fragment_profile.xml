@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile_Fragment">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="@string/my_account"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/arrow"
+        app:layout_constraintBottom_toTopOf="@+id/SplashScreenImage2"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/go_back" />
+
+    <ImageView
+        android:id="@+id/SplashScreenImage2"
+        android:layout_width="132dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="126dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/SplashScreenImage2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <TextView
+        android:id="@+id/my_account"
+        android:layout_width="356dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/MyAccount"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/my_products"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SplashScreenImage2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/my_products"
+        android:layout_width="356dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/my_products"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/my_Balance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/my_Balance"
+        android:layout_width="356dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/my_Balance"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/about_us"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/delivery_Addresses"
+        android:layout_width="356dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/Delivery_Addresses"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_us" />
+
+    <TextView
+        android:id="@+id/about_us"
+        android:layout_width="356dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/about_us"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/delivery_Addresses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_us"
+        android:layout_width="356dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/contact_us"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_Addresses" />
+
+    <Button
+        android:id="@+id/log_out"
+        android:layout_width="284dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/button_shap"
+        android:text="@string/log_out"
+        android:textColor="#fff"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_us"
+        app:layout_constraintVertical_bias="0.145" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

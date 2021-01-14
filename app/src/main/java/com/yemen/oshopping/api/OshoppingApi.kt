@@ -96,4 +96,9 @@ interface OshoppingApi {
         @Field("user_id") user_id: Int?, @Field("block") block: Int
     ): Call<DefaultResponse>
 
+
+    @DELETE("oshopping_api/api/category_api.php")
+    fun deleteCategory(@Field("cat_id") cat_id: Int?,@Field("cat_name") cat_name: String
+    ): Call<DefaultResponse>
+
 }

@@ -35,8 +35,40 @@ class FetchData {
                 response: Response<SingleProductResponse>
             ) {
                 Log.d(TAG, "Response received successfully")
+
                 val singleProductResponse: SingleProductResponse? = response.body()
                 val categoryItems: ProductItem? = singleProductResponse?.productItem
+
+                val productResponse: ProductResponse? = response.body()
+                val productItems: List<ProductItem> = productResponse?.productItem
+                    ?: mutableListOf()
+                Log.d(TAG, "successfully ${productItems}")
+                responseLiveData.value = productItems
+            }
+        })
+
+        return responseLiveData
+    }
+
+
+    fun fetchCategory(): LiveData<List<Category>> {
+        val responseLiveData: MutableLiveData<List<Category>> = MutableLiveData()
+        var categoryRequest: Call<CategoryResponse> = RetrofitClient().oshoppingApi.fetchCategory()
+        categoryRequest.enqueue(object : Callback<CategoryResponse> {
+
+            override fun onFailure(call: Call<CategoryResponse>, t: Throwable) {
+                Log.d(TAG, "Failed to fetch Product", t)
+            }
+
+            override fun onResponse(
+                call: Call<CategoryResponse>,
+                response: Response<CategoryResponse>
+            ) {
+                Log.d(TAG, "Response received successfully")
+                val categoryResponse: CategoryResponse? = response.body()
+                val categoryItems: List<Category> = categoryResponse?.categoryItem
+                    ?: mutableListOf()
+
                 responseLiveData.value = categoryItems
             }
     })
